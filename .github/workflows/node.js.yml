@@ -27,6 +27,17 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm install axios, azure-pipelines-task-lib, http, https, https-proxy-agent, tfx-cli, @types/node, @types/q, mocha, sync-request, @types/mocha, typescript@4.6.3
+    - run: npm install axios
+    - run: npm install azure-pipelines-task-lib
+    - run: npm install http
+    - run: npm install https
+    - run: npm install https-proxy-agent
+    - run: npm install tfx-cli
+    - run: npm install @types/node
+    - run: npm install @types/q
+    - run: npm install mocha
+    - run: npm install sync-request
+    - run: npm install @types/mocha
+    - run: npm install typescript@4.6.3
     - run: tsc
     - run: npx tfx-cli extension create
