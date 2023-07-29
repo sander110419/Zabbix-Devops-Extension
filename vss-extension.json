@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "SanderHilven",
     "name": "Zabbix maintenance on build/release",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "SanderHilven",
     "public": false,
     "targets": [

@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "axios": "^1.4.0",
+    "azure-pipelines-task-lib": "^4.4.0",
+    "http": "0.0.1-security",
+    "https": "^1.0.0",
+    "https-proxy-agent": "^7.0.1"
+  },
+  "name": "devops-extension-1",
+  "description": "This repo enables the integration between DevOps and Zabbix.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://atlascopco-ptba@dev.azure.com/atlascopco-ptba/Zabbix/_git/DevOps-Extension"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.4.5",
+    "@types/q": "^1.5.5",
+    "sync-request": "^6.1.0"
+  }
+}

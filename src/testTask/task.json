@@ -1,0 +1,44 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+    "id": "b9dfda11-b890-4577-a00f-8efd6253b526",
+    "name": "Zabbix-DuringTest",
+    "friendlyName": "Zabbix maintenance window during Test!" ,
+    "instanceNameFormat": "Zabbix maintenance",
+    "description": "This tasks sets the maintenance window for the specified AppID",
+    "helpMarkDown": "",
+    "category": "Test",
+    "author": "Sander Hilven",
+    "version": {
+        "Major": 0,
+        "Minor": 0,
+        "Patch": 2
+    },
+    "groups": [
+        {
+            "name": "inputGroup",
+            "displayName": "Source",
+            "isExpanded": true
+        },
+        {
+            "name": "outputGroup",
+            "displayName": "Output",
+            "isExpanded": true
+        }
+    ],
+    "inputs": [
+        {
+            "name": "ApplicationID",
+            "type": "string",
+            "label": "CMDB Application ID",
+            "defaultValue": "APP-00000000",
+            "required": true,
+            "helpMarkDown": "This is the APP ID for your application",
+            "groupName": "inputGroup"
+        }
+    ],
+    "execution": {
+        "Node16": {
+            "target": "task.js"
+        }
+    }
+    }
