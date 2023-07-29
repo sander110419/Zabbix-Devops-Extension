@@ -1,0 +1,66 @@
+{
+    "manifestVersion": 1,
+    "id": "SanderHilven",
+    "name": "Zabbix maintenance on build/release",
+    "version": "0.0.1",
+    "publisher": "SanderHilven",
+    "public": false,
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "description": "An extension by Sander Hilven to automagically set a maintenance window in Zabbix from your build pipeline",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"
+    },
+    "files": [
+        {
+            "path": "src/buildTask",
+            "packagePath": "buildTask"
+        },
+        {
+            "path": "src/releaseTask",
+            "packagePath": "releaseTask"
+        },
+        {
+            "path": "src/testTask",
+            "packagePath": "testTask"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "buildTask",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "buildTask"
+            }
+        },
+        {
+            "id": "releaseTask",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "releaseTask"
+            }
+        },
+        {
+            "id": "testTask",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "testTask"
+            }
+        }
+    ]
+}
