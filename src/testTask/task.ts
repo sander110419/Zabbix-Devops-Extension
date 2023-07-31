@@ -6,8 +6,11 @@ import * as tl from 'azure-pipelines-task-lib/task';
 let buildId = tl.getVariable('Build.BuildId');
 //get AppID
 let hostId = tl.getInput('HostID', true);
-//Get pipeline name
-let pipelineName = tl.getVariable('Build.DefinitionName');
+//Get project name
+let projectName = tl.getVariable('System.TeamProject');
+//Get Org ID
+let collectionUri = tl.getVariable('System.CollectionUri');
+
 //get zabbix URL
 let zabbixUrl = tl.getInput('zabbixUrl', true);
 
@@ -57,8 +60,9 @@ async function main() {
         jsonrpc: "2.0",
         method: "maintenance.create",
         params: {
-            name: "Devops initiated: " + pipelineName + " Build: #" + buildId,
+            name: "Devops initiated: " + projectName + " Build: #" + buildId,
             hosts: { "hostid": hostId },
+            description: `Pipeline link: ${collectionUri}/${projectName}/_build/results?buildId=${buildId}&view=results`,
             active_since: epoch.toString(),
             active_till: oneHour.toString(),
             tags_evaltype: "0",

@@ -1,8 +1,8 @@
 {
     "manifestVersion": 1,
-    "id": "SanderHilven",
+    "id": "ZabbixMaintenance",
     "name": "Zabbix maintenance on build/release",
-    "version": "0.0.2",
+    "version": "1.0.3",
     "publisher": "SanderHilven",
     "public": false,
     "targets": [
@@ -10,13 +10,28 @@
             "id": "Microsoft.VisualStudio.Services"
         }
     ],
-    "description": "An extension by Sander Hilven to automagically set a maintenance window in Zabbix from your build pipeline",
+    "description": "An extension to automatically set a maintenance window in Zabbix directly from your build pipeline",
     "categories": [
         "Azure Pipelines"
     ],
     "icons": {
         "default": "images/extension-icon.png"
     },
+    "content": {
+        "details": {
+            "path": "overview.md"
+        }
+    },
+    "tags": [
+        "zabbix",
+        "monitoring",
+        "maintenance"
+    ],
+    "screenshots": [
+        {
+            "path": "images/screen1.png"
+        }
+    ],
     "files": [
         {
             "path": "src/buildTask",

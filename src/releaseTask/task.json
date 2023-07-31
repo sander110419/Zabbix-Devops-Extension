@@ -9,9 +9,9 @@
     "category": "Deploy",
     "author": "Sander Hilven",
     "version": {
-        "Major": 0,
+        "Major": 1,
         "Minor": 0,
-        "Patch": 2
+        "Patch": 3
     },
     "groups": [
         {
@@ -27,12 +27,48 @@
     ],
     "inputs": [
         {
-            "name": "ApplicationID",
+            "name": "zabbixvUsername",
             "type": "string",
-            "label": "CMDB Application ID",
-            "defaultValue": "APP-000000000",
+            "label": "Zabbix Username",
+            "defaultValue": "apiuser",
             "required": true,
-            "helpMarkDown": "This is the APP ID for your application",
+            "helpMarkDown": "Your zabbix user, make sure it has API access!",
+            "groupName": "inputGroup"
+        },
+        {
+            "name": "zabbixPassword",
+            "type": "string",
+            "label": "Zabbix Password",
+            "defaultValue": "secret",
+            "required": true,
+            "helpMarkDown": "Your zabbix user password, make sure it has API access!",
+            "groupName": "inputGroup"
+        },
+        {
+            "name": "zabbixUrl",
+            "type": "string",
+            "label": "Zabbix URL",
+            "defaultValue": "https://zabbix.com/api_jsonrpc.php",
+            "required": true,
+            "helpMarkDown": "Your personal Zabbix portal URL, INCLUDING /api_jsonrpc.php",
+            "groupName": "inputGroup"
+        },
+        {
+            "name": "maintenanceWindow",
+            "type": "int",
+            "label": "Maintenance duration (in minutes)",
+            "defaultValue": "5",
+            "required": true,
+            "helpMarkDown": "How long (in minutes) should your host be put in maintenance?",
+            "groupName": "inputGroup"
+        },
+        {
+            "name": "HostID",
+            "type": "string",
+            "label": "Zabbix HostID",
+            "defaultValue": "12554",
+            "required": true,
+            "helpMarkDown": "Add the ID of host you want to put into maintenance mode",
             "groupName": "inputGroup"
         }
     ],

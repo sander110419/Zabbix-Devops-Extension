@@ -9,9 +9,9 @@
     "category": "Build",
     "author": "Sander Hilven",
     "version": {
-        "Major": 0,
+        "Major": 1,
         "Minor": 0,
-        "Patch": 2
+        "Patch": 3
     },
     "groups": [
         {
@@ -56,8 +56,8 @@
         {
             "name": "maintenanceWindow",
             "type": "int",
-            "label": "Maintenance Window",
-            "defaultValue": "https://zabbix.com/api_jsonrpc.php",
+            "label": "Maintenance duration (in minutes)",
+            "defaultValue": "5",
             "required": true,
             "helpMarkDown": "How long (in minutes) should your host be put in maintenance?",
             "groupName": "inputGroup"
